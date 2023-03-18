@@ -3,7 +3,21 @@
 require 'connect/../db.php';
 
 if( isset($_POST['first-name']) && !empty($_POST['first-name'])){
+    $upName= $_POST["first-name"];
+    $upLast= $_POST["last-name"];
+    $upEmailMobile= $_POST["email-mobile"];
+    $upPassword= $_POST['up-password'];
+    $birthDay= $_POST['birth-day'];
+    $birthMonth= $_POST['birth-month'];
+    $birthYear= $_POST['birth-year'];
+    $upgen= $_POST['gen'];
+    $birth= $_POST[''.birthYear.'-'.birthMonth.''.birthDay.''];
 
+    echo "$birth";
+
+
+} else{
+    echo "user not found";
 }
 ?>
 
