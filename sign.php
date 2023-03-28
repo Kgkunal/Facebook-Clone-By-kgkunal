@@ -10,8 +10,12 @@ if( isset($_POST['first-name']) && !empty($_POST['first-name'])){
     $birthDay= $_POST['birth-day'];
     $birthMonth= $_POST['birth-month'];
     $birthYear= $_POST['birth-year'];
-    $upgen= $_POST['gen'];
-    $birth= $_POST[' '.$birthYear.'-'.$birthMonth.'-'.$birthDay.' '];
+    if(!empty($_POST['gen'])){
+        $upgen= $_POST['gen'];
+
+    }
+    
+    $birth= ' '.$birthYear.'-'.$birthMonth.'-'.$birthDay.' ';
 
     echo "$birth";
 
